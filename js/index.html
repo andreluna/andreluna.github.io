@@ -1,8 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; URL=http://192.168.0.1/">
-  </head>
-  <body>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A+C</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+        }
+
+        function draw() {
+            // Cria um degradê de azul para laranja como fundo
+            let from = color(0, 0, 255);
+            let to = color(255, 165, 0);
+            background(lerpColor(from, to, mouseY / height));
+
+            // Define a cor dos triângulos como vermelho
+            fill(255, 0, 0);
+
+            // Desenha um triângulo no local do mouse
+            triangle(mouseX, mouseY, mouseX + 20, mouseY + 40, mouseX - 20, mouseY + 40);
+        }
+    </script>
+</body>
 </html>

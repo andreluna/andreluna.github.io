@@ -1,8 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; URL=https://cat-bounce.com/">
-  </head>
-  <body>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>51.49725543635967, -0.2126751871786581</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            background(0); 
+        }
+
+        function draw() {
+        }
+
+        function mouseMoved() {
+            let r = random(255);
+            let g = random(255);
+            let b = random(255);
+            let alpha = 150; 
+
+            fill(r, g, b, alpha);
+
+            let squareSize = random(10, 50);
+            rect(mouseX - squareSize / 2, mouseY - squareSize / 2, squareSize, squareSize);
+        }
+    </script>
+</body>
 </html>
